@@ -100,7 +100,7 @@ module.exports ={
     },
     // Delete data karyawan
     deleteDataKaryawan(req,res){
-        let id = req.body.id
+        let id = req.params.id
         pool.getConnection(function(err, connection) {
             if (err) throw err;
             connection.query(
@@ -112,7 +112,7 @@ module.exports ={
                 if(error) throw error;  
                 res.send({ 
                     success: true, 
-                    message: 'Berhasil hapus data!'
+                    message: 'Berhasil hapus data!',
                 });
             });
             connection.release();

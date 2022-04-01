@@ -7,6 +7,8 @@ router.get('/karyawan/:id', karyawan.getDataKaryawanByID);
 
 router.post('/karyawan/add', karyawan.addDataKaryawan);
 
-router.post('/karyawan/edit', karyawan.editDataKaryawan);
+router.patch('/karyawan/edit', karyawan.editDataKaryawan);
+
+router.delete('/karyawan/:id', karyawan.deleteDataKaryawan);
 
 module.exports = router;
